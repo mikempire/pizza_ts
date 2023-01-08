@@ -1,0 +1,64 @@
+:root {
+  --primary: #fe5f1e;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--orangeDark);
+
+  :global {
+    .selected {
+      background: var(--primary);
+      font-weight: 600;
+      border: 1px solid var(--primary);
+      border-radius: 50%;
+
+      a {
+        color: #ffffff;
+      }
+    }
+
+    .disabled {
+      opacity: 0.4;
+
+      a {
+        cursor: default;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    border-radius: 0.6rem;
+    background: #ffffff;
+    box-shadow: 0 0.8rem 2rem rgb(90 97 129 / 5%);
+
+
+    li {
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 50%;
+      border: 1px solid var(--primary);
+      margin: 5px;
+      user-select: none;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0.3rem;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--primary);
+    }
+
+
+  }
+}
